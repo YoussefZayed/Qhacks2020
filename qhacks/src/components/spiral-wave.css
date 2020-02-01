@@ -1,0 +1,10 @@
+.container {
+    background-color: #049b2593;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px grey;
+}
+
+.button {
+    border-radius: 15px;
+    box-shadow: 3px 3px 3px grey;
+}

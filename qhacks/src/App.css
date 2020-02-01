@@ -1,5 +1,6 @@
-.App {
+div {
   text-align: center;
+  justify-content: center;
 }
 
 .App-header {
@@ -13,6 +14,7 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.title {
+  font-weight: 700;
+  font-family: SourceSansProBold;
 }

@@ -1,30 +1,26 @@
 import React from 'react';
 import './App.css';
-import {Container, Col, Row} from 'react-bootstrap';
+import './assets/css/font-awesome.min.css';
+import {Col} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import SpiralWave from './components/spiral-wave.component';
 import Audio from './components/audio.component';
 
 function App() {
   return (
-    <Container className="App">
-      <div style={{marginTop: '30px', fontSize: '2rem'}}>
-        Parkinson's Checker
+    <div className='App' style={{display: 'flex'}}>
+      <div>
+        
+          <div className='title' style={{fontSize: 56, marginTop: '15%'}}>
+            Do you have Parkinson's disease?
+          </div>
 
-        <Row style={{marginTop: '20px'}}>
-
-          <Col>
+          <div style={{marginTop: '10%'}}>
             <SpiralWave/>
-          </Col>
-
-          <Col>
-            <Audio/>
-          </Col>
-
-        </Row>
+          </div>
 
       </div>
-    </Container>
+    </div>
   );
 }
 
