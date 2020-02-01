@@ -8,24 +8,8 @@ export default class SpiralWave extends Component {
         super(props);
 
         this.state = {
-            image_file: null
+            audio_clip: null
         }
-
-        this.uploadImage = this.uploadImage.bind(this);
-    }
-
-    uploadImage(event) {
-
-        var file = event.target.files[0]
-        var reader = new FileReader();
-        reader.readAsBinaryString(file);
-      
-        this.setState({
-            image_file: reader.result
-        })
-
-        var output = document.getElementById('imageOutput');
-        output.src = URL.createObjectURL(event.target.files[0]);
     }
 
     render() {
@@ -36,15 +20,13 @@ export default class SpiralWave extends Component {
                               marginLeft: '20px', 
                               width: '500px',
                               height: '500px'}}>
-                    <Card.Header style = {{fontSize: '1.1rem'}}>Upload a file of a spiral or wave</Card.Header>
+                    <Card.Header style = {{fontSize: '1.1rem'}}>Record an audio clip</Card.Header>
                     <Card.Body>
-                        <input type='file'
-                            accept='image/png, image/jpg'
-                            style={{fontSize: '1rem'}}
-                            onChange={this.uploadImage}/>
                         <div style={{display: 'flex', 
-                                     justifyContent: 'center'}}>
-                            <img id='imageOutput' src={null}/>
+                                     justifyContent: 'center',
+                                     marginLeft: '20px', 
+                                     marginRight: '20px'}}>
+                            Test
                         </div>
                     </Card.Body>
                     <Card.Footer>
