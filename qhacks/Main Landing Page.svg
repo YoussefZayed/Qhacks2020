@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1813" viewBox="0 0 1920 1813">
+  <defs>
+    <filter id="Rectangle_5" x="906.029" y="1287.64" width="754.55" height="466.711" filterUnits="userSpaceOnUse">
+      <feOffset dx="-3" dy="-7" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_8" x="469" y="1266" width="328" height="81" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_9" x="1122" y="1602" width="328" height="81" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-3"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-Web_1920_1">
+      <rect width="1920" height="1813"/>
+    </clipPath>
+  </defs>
+  <g id="Web_1920_1" data-name="Web 1920 – 1" clip-path="url(#clip-Web_1920_1)">
+    <rect width="1920" height="1813" fill="#151515"/>
+    <path id="Path_2" data-name="Path 2" d="M0,0H1920V1006H0Z" transform="translate(0 925)" fill="#88e2b1"/>
+    <text id="Worried_about_Parkinson_s_Check_your_symptoms_in_a_few_clicks" data-name="Worried about Parkinson’s?
+Check your symptoms in a few clicks" transform="translate(140 440)" fill="#81ffbb" font-size="70" font-family="HelveticaNeue-Bold, Helvetica Neue" font-weight="700"><tspan x="0" y="0">Worried about Parkinson’s?</tspan><tspan x="0" y="85">Check your symptoms in a few clicks</tspan></text>
+    <rect id="Rectangle_1" data-name="Rectangle 1" width="364" height="81" rx="40.5" transform="translate(140 616)" fill="#f2f2f2"/>
+    <path id="Path_1" data-name="Path 1" d="M92.495,111.371c1.483.238,6.158,7.532,6.158,7.532s10.161,9.2,16.667,5c8.9-5.749-6.175-22.353,13-28.946s10.8,15.858,27.513,7.558-2.208-21.353,0-27.032" transform="translate(55)" fill="none" stroke="#00b907" stroke-width="10"/>
+    <text id="Worried_about_Parkinson_s_Check_your_symptoms_in_a_few_clicks-2" data-name="Worried about Parkinson’s?
+Check your symptoms in a few clicks" transform="translate(140 440)" fill="#81ffbb" font-size="70" font-family="HelveticaNeue-Bold, Helvetica Neue" font-weight="700"><tspan x="0" y="0">Worried about Parkinson’s?</tspan><tspan x="0" y="85">Check your symptoms in a few clicks</tspan></text>
+    <text id="Get_Started" data-name="Get Started" transform="translate(218 671)" font-size="38" font-family="HelveticaNeue-Bold, Helvetica Neue" font-weight="700"><tspan x="0" y="0">Get Started</tspan></text>
+    <text id="PLACEHOLDER" transform="translate(258 111)" fill="#fff" font-size="30" font-family="HelveticaNeue-Bold, Helvetica Neue" font-weight="700"><tspan x="0" y="0">PLACEHOLDER</tspan></text>
+    <rect id="Rectangle_6" data-name="Rectangle 6" width="259" height="65" rx="32.5" transform="translate(1505 61)" fill="#f2f2f2"/>
+    <text id="Sign_Up" data-name="Sign Up" transform="translate(1635 105)" font-size="30" font-family="HelveticaNeue-Bold, Helvetica Neue" font-weight="700"><tspan x="-56.115" y="0">Sign Up</tspan></text>
+    <rect id="Rectangle_7" data-name="Rectangle 7" width="259" height="65" rx="32.5" transform="translate(1218 62)" fill="#f2f2f2"/>
+    <text id="Login" transform="translate(1348 105)" font-size="30" font-family="HelveticaNeue-Bold, Helvetica Neue" font-weight="700"><tspan x="-39.99" y="0">Login</tspan></text>
+    <g id="Group_1" data-name="Group 1" transform="translate(117 32.242)">
+      <g id="Rectangle_3" data-name="Rectangle 3" transform="translate(884.05 933.5) rotate(90)" fill="#fff" stroke="#707070" stroke-width="1">
+        <rect width="448.711" height="736.55" rx="167" stroke="none"/>
+        <rect x="0.5" y="0.5" width="447.711" height="735.55" rx="166.5" fill="none"/>
+      </g>
+      <rect id="Rectangle_4" data-name="Rectangle 4" width="448.711" height="736.55" rx="167" transform="translate(884.05 933.5) rotate(90)" fill="#e8fff3"/>
+      <g transform="matrix(1, 0, 0, 1, -117, -32.24)" filter="url(#Rectangle_5)">
+        <rect id="Rectangle_5-2" data-name="Rectangle 5" width="448.711" height="736.55" rx="167" transform="translate(1654.58 1303.64) rotate(90)" fill="#fff"/>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -117, -32.24)" filter="url(#Rectangle_8)">
+        <rect id="Rectangle_8-2" data-name="Rectangle 8" width="310" height="63" rx="31.5" transform="translate(478 1272)" fill="#11d86c"/>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -117, -32.24)" filter="url(#Rectangle_9)">
+        <rect id="Rectangle_9-2" data-name="Rectangle 9" width="310" height="63" rx="31.5" transform="translate(1131 1608)" fill="#11d86c"/>
+      </g>
+      <text id="Try_the_Drawing_Test" data-name="Try the Drawing Test" transform="translate(512 1028.758)" font-size="32" font-family="HelveticaNeue-Bold, Helvetica Neue" font-weight="700"><tspan x="-155.568" y="0">Try the Drawing Test</tspan></text>
+      <text id="Or_Try_the_Voice_Test" data-name="Or Try the Voice Test" transform="translate(1165 1352.758)" font-size="32" font-family="HelveticaNeue-Bold, Helvetica Neue" font-weight="700"><tspan x="-156.48" y="0">Or Try the Voice Test</tspan></text>
+      <text id="Let_s_GO_" data-name="Let’s GO!" transform="translate(462 1280.758)" font-size="25" font-family="HelveticaNeue-Bold, Helvetica Neue" font-weight="700"><tspan x="0" y="0">Let’s GO!</tspan></text>
+      <text id="Let_s_GO_2" data-name="Let’s GO!" transform="translate(1115 1616.758)" font-size="25" font-family="HelveticaNeue-Bold, Helvetica Neue" font-weight="700"><tspan x="0" y="0">Let’s GO!</tspan></text>
+      <text id="Or_Try_the_Voice_Test-2" data-name="Or Try the Voice Test" transform="translate(1070 1431.758)" font-size="9" font-family="HelveticaNeue-Bold, Helvetica Neue" font-weight="700"><tspan x="-44.01" y="0">Or Try the Voice Test</tspan></text>
+    </g>
+  </g>
+</svg>
