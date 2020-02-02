@@ -1,12 +1,13 @@
 import numpy as np
 import urllib.parse
 from parselmouth.praat import call
+import parselmouth
 
-
-def getfeatures(sound):
+def getfeatures(sound,gender=0):
     f0min = 75
     f0max = 500
 
+    sound = parselmouth.Sound(sound)
     pointProcess = call(sound, "To PointProcess (periodic, cc)", f0min, f0max)
 
 
@@ -17,8 +18,8 @@ def getfeatures(sound):
     apq5Shimmer = call([sound, pointProcess], "Get shimmer (apq5)", 0, 0, 0.0001, 0.02, 1.3, 1.6)
     apq11Shimmer = call([sound, pointProcess], "Get shimmer (apq11)", 0, 0, 0.0001, 0.02, 1.3, 1.6)
 
-    ddaShimmer = call([sound, pointProcess], "Get shimmer (dda)", 0, 0, 0.0001, 0.02, 1.3, 1.6)
-
 
     # Return the features in the order the model will need them in
-    return np.array([shimmer, shimmerDb, apq3Shimmer, apq5Shimmer, apq11Shimmer, ddaShimmer])
+    return np.array([gender,shimmer, shimmerDb, apq3Shimmer, apq5Shimmer, apq11Shimmer])
+if __name__ == "__main__":
+    print(getfeatures("aaaaaaaaaaaaaaa.wav"))

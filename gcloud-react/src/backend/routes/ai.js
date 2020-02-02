@@ -2,6 +2,7 @@ const router = require('express').Router();
 const cors = require('cors');
 const tf = require('@tensorflow/tfjs');
 
+
 router.route('/').get((req, res) => {
     res.json("connected")
 });
@@ -22,11 +23,25 @@ router.route('/wave_test').get((req, res) => {
   console.log(prediction);
 })
 
-/*
-router.route('/audio_test').get((req, res) => {
-  print("neat (audio)");
+
+router.route('/audio_test').get(async(req, res) => {
+  var spawn = require("child_process").spawn; 
+  var process = spawn('python',["soundget.py"] );
+
+   // for example 
+  process.stdout.on('data', async function(data) { 
+    // const model = await tf.loadLayersModel("https://api.myjson.com/bins/kvoue");
+      console.log(data)
+    //   sound = (data);
+      // const prediction = model.predict(sound);
+      // res.json(prediction);
+      // console.log(prediction);
+  }) 
+
+   
+
 })
-*/
+
 
 
 
