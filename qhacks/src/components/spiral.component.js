@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {Container, Button, Tabs, Tab} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../index.css';
-import './spiral-wave.css';
 import Canvas from './canvas.component.js';
 
 export default class SpiralTest extends Component {
@@ -38,7 +37,9 @@ export default class SpiralTest extends Component {
     render() {
         return (
             <Container className='container' border='dark'>
-                <div style={{fontSize: '2.2rem', padding: '2%'}}>Spiral Drawing Test</div>
+                <div style={{padding: '2%'}}>
+                    <div className='header'>Spiral Drawing Test</div>
+                </div>
                 <Tabs defaultActiveKey='profile' id='tab'>
 
                     <Tab className='tab' eventKey='Draw' title='Draw' variant='success'>

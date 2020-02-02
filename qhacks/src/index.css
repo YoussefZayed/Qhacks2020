@@ -1,7 +1,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(#34ce679f, #98ffa9bd, transparent);
+  background: linear-gradient(#10bb499f, #86f353b6);
   background-repeat: no-repeat;
 }
 
@@ -32,5 +32,5 @@ div {
 .button {
   font-family: SourceSansProBold;
   border-radius: 15px;
-  box-shadow: 3px 3px 3px rgb(99, 139, 97);
+  box-shadow: 3px 3px 3px #35a547bd;
 }
