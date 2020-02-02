@@ -6,9 +6,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import SpiralTest from './components/spiral.component';
 import WaveTest from './components/wave.component';
 import Audio from './components/audio.component';
-/*
+
 const cors = require('cors');
 const express = require('express');
+
 const app = express();
 
 app.use(cors());
@@ -16,7 +17,7 @@ app.use(express.json());
 
 const aiRouter = require('./backend/ai');
 app.use('/ai', aiRouter);
-*/
+
 
 function collectData() {
   var spiral64 = SpiralTest.getCanvasBase64();
