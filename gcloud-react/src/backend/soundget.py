@@ -2,6 +2,7 @@ import numpy as np
 import urllib.parse
 from parselmouth.praat import call
 import parselmouth
+import sys
 
 def getfeatures(sound,gender=0):
     f0min = 75
@@ -21,5 +22,3 @@ def getfeatures(sound,gender=0):
 
     # Return the features in the order the model will need them in
     return np.array([gender,shimmer, shimmerDb, apq3Shimmer, apq5Shimmer, apq11Shimmer])
-if __name__ == "__main__":
-    print(getfeatures("aaaaaaaaaaaaaaa.wav"))

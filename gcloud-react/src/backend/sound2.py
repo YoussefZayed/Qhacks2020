@@ -9,6 +9,8 @@ from tensorflow.keras.callbacks import EarlyStopping
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
+import sys
+import soundget
 
 
 
@@ -33,16 +35,14 @@ def train(epoc = 100):
     model.save("sound2.h5")
 
 
-def predict(arr):
+def predict(path,g = 0):
+    arr = soundget.getfeatures(path,g)
     model =load_model('sound2.h5')
     test = np.array(arr)
     test = np.reshape(test,(1,6))
-    print(model.predict(test))
+    return(model.predict(test))
 
 if __name__ == "__main__":
-    for _ in range(10):
-        train(100)
-    predict([1,0.024923,0.22018,0.013534,0.015444,0.019314])
-    predict([0,0.024067,0.20747,0.011582,0.014153,0.021818])
-    predict([0,0.087788,0.76832,0.051024,0.054779,0.059937])
+    predict(soundget.getfeatures(sys.argv[1],sys.argv[2]))
+
 
