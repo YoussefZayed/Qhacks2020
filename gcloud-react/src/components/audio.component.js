@@ -13,6 +13,16 @@ export default class SpiralWave extends Component {
         }
     }
 
+    static getAudio() {
+        return document.getElementById('audioFile').src;
+    }
+
+    uploadAudio(event) {
+        var file = event.target.files[0];
+        this.setState({audio_clip: file});
+        document.getElementById('audioFile').src = file;
+    }
+
     render() {
         return (
             <Container className='container'>
@@ -38,7 +48,8 @@ export default class SpiralWave extends Component {
                 <input type='file'
                     accept='audio/*'
                     style={{marginTop: '3%', marginBottom: '3%'}}
-                    onChange={this.uploadImage}/>
+                    onChange={this.uploadAudio}/>
+                <div id='audioFile' style={{visibility: 'hidden'}}></div>
             </Container>
         )
     }

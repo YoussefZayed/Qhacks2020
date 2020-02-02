@@ -6,28 +6,37 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import SpiralTest from './components/spiral.component';
 import WaveTest from './components/wave.component';
 import Audio from './components/audio.component';
-
+/*
 const cors = require('cors');
 const express = require('express');
 
-require('dotenv').config();
-
 const app = express();
-const port = process.env.PORT || 5000;
 
 app.use(cors());
 app.use(express.json());
-
 const aiRouter = require('./backend/routes/ai');
 app.use('/ai', aiRouter);
-
-app.listen(port, () => {
-  console.log('Test');
-})
+*/
 
 function collectData() {
   var spiral64 = SpiralTest.getCanvasBase64();
   var wave64 = WaveTest.getCanvasBase64();
+  var audioFile = Audio.getAudio();
+/*
+  var spawn = require("child_process").spawn; 
+  var process = spawn('python',["./backend/spiralModel.py",spiral64] );
+  
+  process.stdout.on('data', async function(data) { 
+    // const model = await tf.loadLayersModel("https://api.myjson.com/bins/kvoue");
+      console.log(data)
+    //   sound = (data);
+      // const prediction = model.predict(sound);
+      // res.json(prediction);
+      // console.log(prediction);
+      document.getElementById('result').textContent = data;
+  }) */
+  document.getElementById('result').textContent = spiral64;
+
 /*
   app.get('/spiral_test', function(req, res) {
       res.send(spiral64);
@@ -72,6 +81,7 @@ function App() {
                     Predict
                     </Button>
           </div>
+          <div id='result'></div>
       </div>
     </div>
   );
