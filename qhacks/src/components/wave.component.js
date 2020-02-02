@@ -27,7 +27,7 @@ export default class WaveTest extends Component {
             image_file: reader.result
         })
 
-        var output = document.getElementById('imageOutput');
+        var output = document.getElementById('imageOutputWave');
         output.src = URL.createObjectURL(event.target.files[0]);
     }
 
@@ -49,7 +49,7 @@ export default class WaveTest extends Component {
                             accept='image/png, image/jpg'
                             style={{marginTop: '1%', marginBottom: '1%'}}
                             onChange={this.uploadImage}/>
-                        <img id='imageOutput' style={{justify: 'center', width: '90%', height: '90%'}}/>
+                        <img id='imageOutputWave' style={{justify: 'center', width: '90%', height: '90%'}}/>
                     </Tab>
 
                 </Tabs>

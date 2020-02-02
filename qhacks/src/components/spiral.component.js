@@ -27,7 +27,7 @@ export default class SpiralTest extends Component {
             image_file: reader.result
         })
 
-        var output = document.getElementById('imageOutput');
+        var output = document.getElementById('imageOutputSpiral');
         output.src = URL.createObjectURL(event.target.files[0]);
     }
 
@@ -49,7 +49,7 @@ export default class SpiralTest extends Component {
                             accept='image/png, image/jpg'
                             style={{marginTop: '1%', marginBottom: '1%'}}
                             onChange={this.uploadImage}/>
-                        <img id='imageOutput' style={{justify: 'center', width: '90%', height: '90%'}}/>
+                        <img id='imageOutputSpiral' style={{justify: 'center', width: '90%', height: '90%'}}/>
                     </Tab>
 
                 </Tabs>

@@ -1,6 +1,7 @@
 .container {
     background-color: #ebfff3ea;
     border-radius: 20px;
+    border-color: black;
     box-shadow: 7px 7px 7px rgb(99, 139, 97);
     width: 700px;
     height: 700px;

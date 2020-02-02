@@ -87,10 +87,19 @@ export default class Canvas extends Component {
     );
   }
 }
+
+function svgToBase64() {
+  var svg = document.querySelector('svg');
+  var xml = new XMLSerializer().serializeToString(svg);
+  var svg64 = btoa(xml);
+  var b64start = 'data:image/svg+xml;base64';
+  var image64 = b64start + svg64
+  return image64;
+}
   
 function Drawing({ lines }) {
   return (
-    <svg className="drawing">
+    <svg id='svg' className="drawing">
       {lines.map((line, index) => (
         <DrawingLine key={index} line={line} />
       ))}
