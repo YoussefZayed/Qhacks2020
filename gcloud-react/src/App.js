@@ -7,17 +7,23 @@ import SpiralTest from './components/spiral.component';
 import WaveTest from './components/wave.component';
 import Audio from './components/audio.component';
 
-const cors = require('cors');/*
+const cors = require('cors');
 const express = require('express');
 
+require('dotenv').config();
+
 const app = express();
+const port = process.env.PORT || 5000;
 
 app.use(cors());
 app.use(express.json());
 
 const aiRouter = require('./backend/routes/ai');
 app.use('/ai', aiRouter);
-*/
+
+app.listen(port, () => {
+  console.log('Test');
+})
 
 function collectData() {
   var spiral64 = SpiralTest.getCanvasBase64();
