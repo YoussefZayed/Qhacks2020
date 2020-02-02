@@ -7,17 +7,28 @@ import SpiralTest from './components/spiral.component';
 import WaveTest from './components/wave.component';
 import Audio from './components/audio.component';
 
+<<<<<<< HEAD
 const cors = require('cors');
 // const express = require('express');
+=======
+const cors = require('cors');/*
+const express = require('express');
+>>>>>>> 33575ed2a54e37ef24aea3c1961afd5d3ac86dd1
 
 // const app = express();
 
 // app.use(cors());
 // app.use(express.json());
 
+<<<<<<< HEAD
 // // const aiRouter = require('./backend/routes/ai');
 // app.use('/ai', aiRouter);
 
+=======
+const aiRouter = require('./backend/routes/ai');
+app.use('/ai', aiRouter);
+*/
+>>>>>>> 33575ed2a54e37ef24aea3c1961afd5d3ac86dd1
 
 function collectData() {
   var spiral64 = SpiralTest.getCanvasBase64();
@@ -63,7 +74,7 @@ function App() {
                     style={{padding: '1%', fontSize: 36, borderRadius: '15px'}}
                     onClick={collectData}
                     >
-                    Predit
+                    Predict
                     </Button>
           </div>
       </div>
