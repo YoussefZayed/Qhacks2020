@@ -49,12 +49,17 @@ export default class WaveTest extends Component {
                         </div> 
                     </Tab>
 
-                    <Tab className='tab' eventKey='Upload' title='Upload'>
-                        <input type='file'
-                            accept='image/png, image/jpg'
-                            style={{marginTop: '1%', marginBottom: '1%'}}
-                            onChange={this.uploadImage}/>
-                        <img id='imageOutputWave' style={{justify: 'center', width: '90%', height: '90%'}}/>
+                    <Tab className='tab' eventKey='Upload' title='Upload' >
+                        <div style={{display: 'inline-block', width: '500px', height: '500px'}}>
+                            <div style = {{padding: '2%', marginTop: '2%', marginBottom: '2%', fontSize: '1.5rem'}}>Upload an image of a hand-drawn wave</div>
+                            <input type='file'
+                                accept='image/*'
+                                style={{marginTop: '1%'}}
+                                onChange={this.uploadImage}/>
+                            <div style={{display: 'flex', maxWidth: '100%', maxHeight: '100%', padding: '1%'}}>
+                                <img id='imageOutputWave'/>
+                            </div>
+                        </div>
                     </Tab>
 
                 </Tabs>

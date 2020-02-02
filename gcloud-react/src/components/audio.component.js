@@ -36,7 +36,7 @@ export default class SpiralWave extends Component {
 
                 <div style = {{padding: '2%', marginTop: '2%', marginBottom: '2%', fontSize: '1.5rem'}}>Upload an audio clip</div>
                 <input type='file'
-                    accept='audio/wav'
+                    accept='audio/*'
                     style={{marginTop: '3%', marginBottom: '3%'}}
                     onChange={this.uploadImage}/>
             </Container>

@@ -7,7 +7,7 @@ import SpiralTest from './components/spiral.component';
 import WaveTest from './components/wave.component';
 import Audio from './components/audio.component';
 
-const cors = require('cors');
+const cors = require('cors');/*
 const express = require('express');
 
 const app = express();
@@ -17,7 +17,7 @@ app.use(express.json());
 
 const aiRouter = require('./backend/routes/ai');
 app.use('/ai', aiRouter);
-
+*/
 
 function collectData() {
   var spiral64 = SpiralTest.getCanvasBase64();
@@ -63,7 +63,7 @@ function App() {
                     style={{padding: '1%', fontSize: 36, borderRadius: '15px'}}
                     onClick={collectData}
                     >
-                    Predit
+                    Predict
                     </Button>
           </div>
       </div>
