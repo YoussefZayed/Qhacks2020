@@ -5,7 +5,7 @@ const cors = require('cors');
 require('dotenv').config();
 
 const app = express();
-// const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5000;
 
 app.use(cors());
 app.use(express.json());
@@ -18,11 +18,11 @@ app.use(express.json());
 //   console.log("MongoDB database connection established successfully");
 // })
 
+const aiRouter = require('./routes/ai');
+app.use('/ai', aiRouter);
+// function send(typeString) {
 
-function send(typeString) {
-    const aiRouter = require('./routes/ai');
-    app.use(typeString, aiRouter);
-}
+// }
 
 
 app.listen(port, () => {
