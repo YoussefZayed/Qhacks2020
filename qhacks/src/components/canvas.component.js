@@ -18,6 +18,15 @@ export default class Canvas extends Component {
     this.clearDrawing = this.clearDrawing.bind(this);
   }
 
+  static svgToBase64() {
+    var svg = document.querySelector('svg');
+    var xml = new XMLSerializer().serializeToString(svg);
+    var svg64 = btoa(xml);
+    var b64start = 'data:image/svg+xml;base64';
+    var image64 = b64start + svg64
+    return image64;
+  }
+
   componentDidMount() {
     document.addEventListener("mouseup", this.handleMouseUp);
   }
@@ -86,15 +95,6 @@ export default class Canvas extends Component {
       </div>
     );
   }
-}
-
-function svgToBase64() {
-  var svg = document.querySelector('svg');
-  var xml = new XMLSerializer().serializeToString(svg);
-  var svg64 = btoa(xml);
-  var b64start = 'data:image/svg+xml;base64';
-  var image64 = b64start + svg64
-  return image64;
 }
   
 function Drawing({ lines }) {

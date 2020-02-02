@@ -17,6 +17,10 @@ export default class WaveTest extends Component {
         this.uploadImage = this.uploadImage.bind(this);
     }
 
+    static getBase64Img() {
+        return Canvas.svgToBase64();
+    }
+
     uploadImage(event) {
 
         var file = event.target.files[0]

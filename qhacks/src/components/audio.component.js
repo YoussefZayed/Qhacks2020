@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Container, Form, Col, Button} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '../App.css';
 
 export default class SpiralWave extends Component {
 
@@ -15,7 +16,8 @@ export default class SpiralWave extends Component {
     render() {
         return (
             <Container className='container'>
-                <div style={{fontSize: '2.2rem', padding: '2%'}}>Audio Test</div>
+                <div style={{padding: '1%'}}></div>
+                <div className='header'>Audio Test</div>
                 <Form.Row style={{padding: '2%'}}>
                     <Form.Group as={Col} controlId="formAge">
                     <Form.Label style={{fontSize: '1.5rem'}}>Age</Form.Label>

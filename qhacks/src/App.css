@@ -3,6 +3,14 @@ div {
   justify-content: center;
 }
 
+.header {
+  font-size: 2.2rem;
+  padding: 1%;
+  background: linear-gradient(#cafad2bd, #6bb3839f);
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px rgb(99, 139, 97);
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
