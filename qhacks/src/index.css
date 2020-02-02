@@ -1,10 +1,8 @@
 html, body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(#06f56180,#68fd689f, transparent);
+  background: linear-gradient(#04b14ca9,#3fff3f9f);
   background-repeat: no-repeat;
-  height: 100%;
-  width: 100%;
 }
 
 code {
@@ -15,4 +13,24 @@ code {
 @font-face {
   font-family: 'SourceSansProBold';
   src: local('SourceSansProBold'), url(./fonts/SourceSansPro-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'SourceSansPro';
+  src: local('SourceSansPro'), url(./fonts/SourceSansPro-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'SourceSansProLight';
+  src: local('SourceSansProLight'), url(./fonts/SourceSansPro-LightItalic.ttf) format('truetype');
+}
+
+div {
+  font-family: SourceSansProBold;
+}
+
+.button {
+  font-family: SourceSansProBold;
+  border-radius: 15px;
+  box-shadow: 3px 3px 3px rgb(99, 139, 97);
 }

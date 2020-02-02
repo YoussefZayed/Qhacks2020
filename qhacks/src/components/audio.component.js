@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Card, Button} from 'react-bootstrap';
+import {Container, Form, Col, Button} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default class SpiralWave extends Component {
@@ -14,26 +14,29 @@ export default class SpiralWave extends Component {
 
     render() {
         return (
-            <div>
-                <Card border="success" 
-                      style={{marginRight: '20px', 
-                              marginLeft: '20px', 
-                              width: '500px',
-                              height: '500px'}}>
-                    <Card.Header style = {{fontSize: '1.1rem'}}>Record an audio clip</Card.Header>
-                    <Card.Body>
-                        <div style={{display: 'flex', 
-                                     justifyContent: 'center',
-                                     marginLeft: '20px', 
-                                     marginRight: '20px'}}>
-                            Test
-                        </div>
-                    </Card.Body>
-                    <Card.Footer>
-                        <Button variant='success'>Do I have Parkinson's?</Button>
-                    </Card.Footer>
-                </Card>
-            </div>
+            <Container className='container'>
+                <div style={{fontSize: '2.2rem', padding: '2%'}}>Audio Test</div>
+                <Form.Row style={{padding: '2%'}}>
+                    <Form.Group as={Col} controlId="formAge">
+                    <Form.Label style={{fontSize: '1.5rem'}}>Age</Form.Label>
+                    <Form.Control required type='number'/>
+                    </Form.Group>
+
+                    <Form.Group as={Col} controlId="formGender">
+                    <Form.Label style={{fontSize: '1.5rem'}}>Gender</Form.Label>
+                    <Form.Control as="select">
+                        <option>Male</option>
+                        <option>Female</option>
+                    </Form.Control>
+                    </Form.Group>
+                </Form.Row>
+
+                <div style = {{padding: '2%', marginTop: '2%', marginBottom: '2%', fontSize: '1.5rem'}}>Upload an audio clip</div>
+                <input type='file'
+                    accept='audio/wav'
+                    style={{marginTop: '3%', marginBottom: '3%'}}
+                    onChange={this.uploadImage}/>
+            </Container>
         )
     }
 }
