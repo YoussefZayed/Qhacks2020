@@ -15,7 +15,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const aiRouter = require('./backend/ai');
+const aiRouter = require('./backend/routes/ai');
 app.use('/ai', aiRouter);
 
 
