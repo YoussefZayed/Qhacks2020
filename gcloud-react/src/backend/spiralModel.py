@@ -1,5 +1,5 @@
 from __future__ import absolute_import, division, print_function, unicode_literals
-
+from tensorflow.keras.models import Sequential, load_model
 import tensorflow as tf
 from PIL import Image
 import numpy as np
@@ -9,7 +9,7 @@ from tensorflow.keras.layers import Dense, Conv2D, Flatten, Dropout, MaxPooling2
 from keras.preprocessing import image
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 import matplotlib.pyplot as plt
-
+import sys
 
 
 def plotImages(images_arr):
@@ -94,7 +94,7 @@ def train_Spiral (epochs= 10):
             Dense(512, activation='relu'),
             Dense(1, activation='sigmoid')
         ])
-        model_new.load_weights('./checkpoints/my_checkpoint')
+        # model_new = load_model('spiral.h5')
 
         model_new.compile(optimizer='adam',
                     loss='binary_crossentropy',
@@ -142,8 +142,7 @@ def train_Spiral (epochs= 10):
         predictions = model_new.predict(test_image,batch_size=1)
         print(predictions)
         print("prediction for Park is :" ,predictions)
-        model_new.save_weights('./checkpoints/my_checkpoint')
-
+        model.save("spiral.h5")
 
 def train_wave (epochs= 10):
     while True:
@@ -216,13 +215,12 @@ def train_wave (epochs= 10):
             Dense(512, activation='relu'),
             Dense(1, activation='sigmoid')
         ])
-        model_new.load_weights('./checkpointsWave/my_checkpoint')
+        # model_new = load_model('wave.h5')
 
         model_new.compile(optimizer='adam',
                     loss='binary_crossentropy',
                     metrics=['accuracy'])
 
-        model_new.summary()
         history = model_new.fit_generator(
             train_data_gen,
             steps_per_epoch=total_train // batch_size,
@@ -264,7 +262,7 @@ def train_wave (epochs= 10):
         predictions = model_new.predict(test_image,batch_size=1)
         print(predictions)
         print("prediction for Park is :" ,predictions)
-        model_new.save_weights('./checkpointsWave/my_checkpoint')
+        model.save("wave.h5")
         
 
 def testSpiral(path):
@@ -298,7 +296,7 @@ def testSpiral(path):
         Dense(512, activation='relu'),
         Dense(1, activation='sigmoid')
     ])
-    model_new.load_weights('./checkpoints/my_checkpoint')
+    # model_new = load_model('spiral.h5')
     test_image = image.load_img(path, target_size=(256,256))
     test_image = image.img_to_array(test_image)
     test_image = np.expand_dims(test_image, axis=0)
@@ -307,7 +305,6 @@ def testSpiral(path):
 
 def testWave(path):
     batch_size = 30
-        
     IMG_HEIGHT = 256
     IMG_WIDTH = 256
     image_gen_train = ImageDataGenerator(
@@ -335,11 +332,15 @@ def testWave(path):
         Dense(512, activation='relu'),
         Dense(1, activation='sigmoid')
     ])
-    model_new.load_weights('./checkpoints/my_checkpoint')
+    # model_new = load_model('wave.h5')
     test_image = image.load_img(path, target_size=(256,256))
     test_image = image.img_to_array(test_image)
     test_image = np.expand_dims(test_image, axis=0)
     predictions = model_new.predict(test_image,batch_size=1)
     return(predictions)
 if __name__ == "__main__":
-    print("\n\n\n\nThe result is:",testSpiral("V03PE01.png"))
+    if sys.argv[1] == 0:
+        print(testSpiral(sys.argv[2])[0][0])
+    else:
+        print(testWave(sys.argv[2])[0][0])
+    

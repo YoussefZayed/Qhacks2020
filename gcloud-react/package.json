@@ -10,6 +10,8 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "immutable": "^4.0.0-rc.12",
+    "jquery": "^3.4.1",
+    "meteor-node-stubs": "^0.4.1",
     "react": "^16.12.0",
     "react-bootstrap": "^1.0.0-beta.16",
     "react-canvas-draw": "^1.1.0",

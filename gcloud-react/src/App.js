@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import SpiralTest from './components/spiral.component';
 import WaveTest from './components/wave.component';
 import Audio from './components/audio.component';
+import $ from "jquery";
 /*
 const cors = require('cors');
 const express = require('express');
@@ -20,22 +21,16 @@ app.use('/ai', aiRouter);
 
 function collectData() {
   var spiral64 = SpiralTest.getCanvasBase64();
-  var wave64 = WaveTest.getCanvasBase64();
-  var audioFile = Audio.getAudio();
-/*
-  var spawn = require("child_process").spawn; 
-  var process = spawn('python',["./backend/spiralModel.py",spiral64] );
-  
-  process.stdout.on('data', async function(data) { 
-    // const model = await tf.loadLayersModel("https://api.myjson.com/bins/kvoue");
-      console.log(data)
-    //   sound = (data);
-      // const prediction = model.predict(sound);
-      // res.json(prediction);
-      // console.log(prediction);
-      document.getElementById('result').textContent = data;
-  }) */
-  document.getElementById('result').textContent = spiral64;
+  //var wave64 = WaveTest.getCanvasBase64();
+  //var audioFile = Audio.getAudio();
+
+  var URL = "http://127.0.0.1:5000/spiral_test/";
+  var out;
+
+  $.post(URL, {'image': spiral64}, function(data){
+    out = data
+  });
+  document.getElementById('result').textContent = out;
 
 /*
   app.get('/spiral_test', function(req, res) {
