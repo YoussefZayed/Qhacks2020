@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Container, Button, Tabs, Tab} from 'react-bootstrap';
+import {Container, Tabs, Tab} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../index.css';
 import Canvas from './canvas.component.js';
@@ -16,7 +16,7 @@ export default class WaveTest extends Component {
         this.uploadImage = this.uploadImage.bind(this);
     }
 
-    static getBase64Img() {
+    static getCanvasBase64() {
         return Canvas.svgToBase64();
     }
 

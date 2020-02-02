@@ -1,9 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD:qhacks/src/App.js
-=======
-import logo from './logo.png';
-import send from 'gcloud-react/backend/server.js';
->>>>>>> master:gcloud-react/src/App.js
 import './App.css';
 import './index.css';
 import {Button} from 'react-bootstrap';
@@ -11,15 +6,34 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import SpiralTest from './components/spiral.component';
 import WaveTest from './components/wave.component';
 import Audio from './components/audio.component';
+/*
+const cors = require('cors');
+const express = require('express');
+const app = express();
+
+app.use(cors());
+app.use(express.json());
+
+const aiRouter = require('./backend/ai');
+app.use('/ai', aiRouter);
+*/
 
 function collectData() {
-  var spiral64 = SpiralTest.getBase64Img();
-  var wave64 = WaveTest.getBase64Img();
+  var spiral64 = SpiralTest.getCanvasBase64();
+  var wave64 = WaveTest.getCanvasBase64();
+/*
+  app.get('/spiral_test', function(req, res) {
+      res.send(spiral64);
+  });
+
+  app.get('/wave_test', function(req, res) {
+    res.send(wave64);
+  });
+*/
 }
 
 function App() {
   return (
-<<<<<<< HEAD:qhacks/src/App.js
     <div className='App' style={{display: 'flex'}}>
       <div>
         
@@ -52,23 +66,6 @@ function App() {
                     </Button>
           </div>
       </div>
-=======
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <button onClick={send("ai/spiral_test")}>
-        Spiral
-        </button>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
->>>>>>> master:gcloud-react/src/App.js
     </div>
   );
 }

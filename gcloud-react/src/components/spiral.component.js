@@ -16,7 +16,7 @@ export default class SpiralTest extends Component {
         this.uploadImage = this.uploadImage.bind(this);
     }
 
-    static getBase64Img() {
+    static getCanvasBase64() {
         return Canvas.svgToBase64();
     }
 

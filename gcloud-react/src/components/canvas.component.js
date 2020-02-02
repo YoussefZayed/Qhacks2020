@@ -19,11 +19,13 @@ export default class Canvas extends Component {
   }
 
   static svgToBase64() {
+    // convert svg to base64
     var svg = document.querySelector('svg');
     var xml = new XMLSerializer().serializeToString(svg);
     var svg64 = btoa(xml);
     var b64start = 'data:image/svg+xml;base64';
     var image64 = b64start + svg64
+
     return image64;
   }
 
